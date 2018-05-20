@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebAppDemoBiblioteca.models.usuarios.usuarios>
+
+<html>
+
+
+<body>
+
+    <div class="container">
+        <h2>Listado General de Usuarios Administradores</h2>
+        <table class="table table-bordered">
+            <thead>
+
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Username</th>
+                    <th>Direccion</th>
+                    <th>Estado</th>
+                    <th>Nivel</th>
+
+                </tr>
+            </thead>
+
+
+            <tbody>
+                @foreach (var usuarios in Model)
+                {
+
+
+                <tr>
+                    <td>@usuarios.CodigoUsuario</td>
+                    <td>@usuarios.NombreUsuario</td>
+                    <td>@usuarios.UsernameUsuario</td>
+                    <td>@usuarios.DireccionUsuario</td>
+                    <td>@usuarios.EstadoUsuario</td>
+                    @if (@usuarios.CodigoNivel ==1)
+                    {
+
+                    <td>Administrador</td>
+
+                    }
+
+
+                </tr>
+
+
+
+
+
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

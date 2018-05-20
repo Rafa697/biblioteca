@@ -1,0 +1,29 @@
+﻿
+@model ListaUsuariosViewModel
+
+
+            @foreach (var usuarios in Model.Usuarios)
+            {
+             <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="caption">
+                        <table>
+                            <tr>
+                                <td>@usuarios.CodigoUsuario</td>
+                                <td>@usuarios.NombreUsuario</td>
+                                <td>@usuarios.UsernameUsuario</td>
+                                <td>@usuarios.DireccionUsuario</td>
+                                <td>@usuarios.EstadoUsuario</td>
+                                <td>@usuarios.CodigoNivel</td>
+
+
+                            </tr>
+                        </table>
+
+                     </div>
+
+             </div>
+
+                
+
+            }
+     
