@@ -18,9 +18,12 @@ namespace WebAppDemoBiblioteca.models.usuarios
      
         public string DireccionUsuario { get; set; }
         public string EstadoUsuario { get; set; }
+        public string ImagenURL { get; set; }
+        public string ImagenUsuarioURL { get; set; }
 
         public int CodigoNivel { get; set; }
-        [ForeignKey("CodigoNivel")]
+        
+
         public virtual NivelesUsuario NivUsuarios { get; set; }
 
     }

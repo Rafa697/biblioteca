@@ -13,10 +13,10 @@ namespace WebAppDemoBiblioteca.models.usuarios
             {
                 return new List<NivelesUsuario>
                 {
-                    new NivelesUsuario {CodigoNivel=1, NombreNivel="Administrador", DescripcionNivel="Este nivel posee todos los privilegios del sistema" },
-                    new NivelesUsuario {CodigoNivel=2, NombreNivel="Bibliotecario", DescripcionNivel="Este nivel posee privilegios estandar en el sistema" },
-                    new NivelesUsuario {CodigoNivel=3, NombreNivel="Supervisor", DescripcionNivel="Este nivel posee privilegios de lectura y edicion en el sitema"},
-                    new NivelesUsuario {CodigoNivel=4, NombreNivel="Cliente" , DescripcionNivel="Este nivel posee privilegios de solo lectura en el sistema"}
+                    new NivelesUsuario {CodigoNivel=1, NombreNivel="Administrador" },
+                    new NivelesUsuario {CodigoNivel=2, NombreNivel="Bibliotecario" },
+                    new NivelesUsuario {CodigoNivel=3, NombreNivel="Supervisor"},
+                    new NivelesUsuario {CodigoNivel=4, NombreNivel="Cliente" }
                 };
 
             }//fin del get

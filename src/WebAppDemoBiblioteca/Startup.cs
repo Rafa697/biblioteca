@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebAppDemoBiblioteca.models.libros;
-using WebAppDemoBiblioteca.models.editoriales;
-using WebAppDemoBiblioteca.models.adquisiciones;
+
 using WebAppDemoBiblioteca.models.usuarios;
 using WebAppDemoBiblioteca.controllers;
 using Microsoft.Extensions.Configuration;
@@ -43,14 +41,10 @@ namespace WebAppDemoBiblioteca
             option.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
             //registrar mis clases repositorio y mock
             //clase libros
-            services.AddTransient<ICategoriasRepositorio, MockCategoriasRepositorio>();
-            services.AddTransient<ILibrosRepositorio, MockLibrosRepositorio>();
+            //services.AddTransient<ICategoriasRepositorio, MockCategoriasRepositorio>();
+            //services.AddTransient<ILibrosRepositorio, MockLibrosRepositorio>();
             //clase editorial
-            services.AddTransient<IDestacadosRepositorio, MockDestacadosRepositorio>();
-            services.AddTransient<IEditorialesRepositorio, MockEditorialesRepositorio>();
-            //clase adquisicion
-            services.AddTransient<IAdquisionesRepositorio, MockAdquisicionesRepositorio>();
-            services.AddTransient<IDonacionesRepositorio, MockDonacionesRepositorio>();
+           
             //class usuarios
             //services.AddTransient<IUsuariosRepositorio, MockUsuariosRepositorio>();
             //actualizando por implementacion de EFCore
@@ -67,6 +61,7 @@ namespace WebAppDemoBiblioteca
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
             app.UseDeveloperExceptionPage();
+            DataInicio.AgregarData(app);
             
 
         }

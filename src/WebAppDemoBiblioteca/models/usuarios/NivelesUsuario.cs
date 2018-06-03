@@ -15,8 +15,6 @@ namespace WebAppDemoBiblioteca.models.usuarios
         public int CodigoNivel  { get; set; }
 
         public string NombreNivel { get; set; }
-
-        public string DescripcionNivel { get; set; }
         public List<usuarios> Usuarios { get; set; }
     }
 }
