@@ -1,0 +1,45 @@
+﻿@* @model IEnumerable<WebAppbiblioteca.models.Usuarios*@
+@model ListaUsuariosViewModel
+
+
+
+<title>Listado de  Usuarios </title>
+
+<div class="container">
+    <h2>Listado General de Usuarios</h2>
+    <table border="1">
+        <thead>
+
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Username</th>
+                <th>Direccion</th>
+                <th>Estado</th>
+                <th>Nivel</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @* @foreach (var usuarios in Model) *@
+
+            @foreach (var usuarios in Model.Usuarios)
+            {
+
+
+                <tr>
+                    <td>@usuarios.CodigoUsuario</td>
+                    <td>@usuarios.NombreUsuario</td>
+                    <td>@usuarios.UsernameUsuario</td>
+                    <td>@usuarios.DireccionUsuario</td>
+                    <td>@usuarios.EstadoUsuario</td>
+                    <td>@usuarios.CodigoNivel</td>
+
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
